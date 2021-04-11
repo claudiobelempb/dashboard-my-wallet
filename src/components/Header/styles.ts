@@ -1,10 +1,20 @@
 import styled from  'styled-components';
 
-export const Container = styled.header`
-  width: 100%;
-  background: ${props => props.theme.colors.primary};
-`;
+interface IHeaderProps {
+  flexDirection?: string;
+  garea?:string;
+}
 
+export const HeaderContainer = styled.header<IHeaderProps>`
+  grid-area: ${props => props.garea ? props.garea : "MH"};
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  background: ${props => props.theme.colors.blue};
+  padding: 0.25rem;
+`;
+/*
 export const Content = styled.div`
   display: flex;
   align-items: center;
@@ -29,5 +39,5 @@ export const Content = styled.div`
     }
   }
 `;
-
+*/
 

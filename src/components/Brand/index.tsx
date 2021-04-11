@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrandContainer, BrandTitle, BrandImg } from './style';
+import { BrandContainer } from './style';
 
 import logoBrand from '../../assets/images/logo.svg';
 
@@ -7,11 +7,13 @@ interface IBrand {
   title?: string;
 }
 
-export function Brand({ title }: IBrand) {
+const Brand: React.FC<IBrand> = ({ title }: IBrand) => {
   return (
-    <BrandContainer href={'/'}>
-      <BrandImg src={logoBrand} alt={'My Logo'} />
-      <BrandTitle>{title}</BrandTitle>
+    <BrandContainer href={"/"}>
+      <img src={logoBrand} alt={"My Logo"} />
+      <h1>{title}</h1>
     </BrandContainer>
   );
 }
+
+export { Brand };

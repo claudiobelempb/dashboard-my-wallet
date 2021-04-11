@@ -2,12 +2,13 @@ import styled from  'styled-components';
 
 interface IContentProps {
   flexDirection?: string;
+  garea?:string;
 }
 
-export const Container = styled.div<IContentProps>`
-  width: 1020px;
-  margin: auto;
-  background-color: ${props => props.theme.colors.primary};
+export const ContentContainer = styled.div<IContentProps>`
+  grid-area: ${props => props.garea ? props.garea : "CT"};
+  justify-content: center;
+  align-items: center;
 `;
 
 

@@ -1,12 +1,19 @@
 import React from 'react';
 import { 
-  Container
+  ContentContainer
 } from './style';
 
-export const Content: React.FC = () => {
+interface IContentProps {
+  garea?: string;
+  children?: React.ReactNode;
+}
+
+const Content: React.FC<IContentProps> = ({ garea, children }: IContentProps) => {
   return (
-    <Container>
-        <h1>Content</h1>
-    </Container>
+    <ContentContainer garea={garea}>
+      {children}
+    </ContentContainer>
   );
 }
+
+export { Content };

@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
-  background: ${props => props.theme.colors.primary};
+interface IHeaderProps {
+  garea?: string;
+}
+
+export const MainContainer = styled.div<IHeaderProps>`
+  display: grid;
+  background: ${props => props.theme.colors.gray};
 `;
 
 

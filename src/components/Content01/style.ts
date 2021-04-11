@@ -2,7 +2,7 @@ import styled from  'styled-components';
 
 export const MainContainer = styled.div`
   grid-area: CT;
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.blue};
   padding: 0 20px;
   height: calc(100vh - 70px);
   overflow-y: scroll;
@@ -11,11 +11,11 @@ export const MainContainer = styled.div`
     width: 10px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: ${props => props.theme.colors.secondary};
+    background-color: ${props => props.theme.colors.blue_light};
     border-radius:10px;
   }
   &::-webkit-scrollbar-track {
-    background-color: ${props => props.theme.colors.tertiary};
+    background-color: ${props => props.theme.colors.blue_light};
   }
 `;
 

@@ -1,7 +1,11 @@
+import React from "react";
+
 import { NavBarContainer } from './style';
 
-export const NavBar = () => {
+const NavBarHorizontal: React.FC = () => {
   return (
     <NavBarContainer>Nav Bar</NavBarContainer>
   );
 }
+
+export { NavBarHorizontal };

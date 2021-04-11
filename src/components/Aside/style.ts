@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  grid-area: AS;
-  background-color: ${props => props.theme.colors.secondary};
+interface IAsideProps {
+  flexDirection?: string;
+  garea?:string;
+}
+
+export const AsideContainer = styled.aside<IAsideProps>`
+  grid-area: ${props => props.garea ? props.garea : "AS"};
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.25rem;
+  background-color: ${props => props.theme.colors.blue};
   border-right: 1px solid ${props => props.theme.colors.white};
 `;

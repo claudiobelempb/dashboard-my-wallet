@@ -5,7 +5,7 @@ interface IContainer {
 }
 
 export const Container = styled.div<IContainer>`
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.blue};
 `;
 
 

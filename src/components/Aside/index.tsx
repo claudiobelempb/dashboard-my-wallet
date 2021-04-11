@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Brand } from '../Brand';
-import { NavBar } from '../NavBar';
+import { AsideContainer } from "./style";
 
-import { Container } from './style';
+import { Brand } from '../Brand';
+import { NavBarVertical } from '../NavBarVertical';
 
 export const Aside: React.FC = () => {
   return (
-    <Container>
-        <Brand/>
-        <NavBar/>
-    </Container>
+    <AsideContainer>
+      <Brand title={"My Wallet"}/>
+      <NavBarVertical/>
+    </AsideContainer>
   );
 }
