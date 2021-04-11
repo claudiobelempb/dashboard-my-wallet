@@ -1,17 +1,19 @@
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './assets/style/global';
 import dark from './assets/style/themes/dark';
 // import light from './assets/style/themes/light';
 
-// import { Header } from './components/Header';
-import { Dashboard } from './components/Dashboard';
+import { Dashboard } from './pages/DashBoard';
 
-export function App() {
+const App: React.FC = () => {
   return (
     <ThemeProvider theme={dark}>
-      <Dashboard />
       <GlobalStyle />
+      <Dashboard />
     </ThemeProvider>
   );
 }
+
+export { App };
 

@@ -10,7 +10,7 @@ interface IBrand {
 export function Brand({ title }: IBrand) {
   return (
     <BrandContainer href={'/'}>
-      <BrandImg src={logoBrand} alt={'dt money'} />
+      <BrandImg src={logoBrand} alt={'My Logo'} />
       <BrandTitle>{title}</BrandTitle>
     </BrandContainer>
   );

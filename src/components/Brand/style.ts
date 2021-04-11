@@ -10,7 +10,7 @@ export const BrandContainer = styled.a`
 
 export const BrandImg = styled.img`
   height: auto;
-  width:100%;
+  max-width:100%;
 `;
 
 export const BrandTitle = styled.h3`

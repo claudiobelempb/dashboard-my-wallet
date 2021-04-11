@@ -2,30 +2,19 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
-  :root {
-    --blue: #5429CC;
-    --blue-light: #6933FF;
-    --success: #33CC95;
-    --danger: #E62E4D;
-    --dark: #363F5F;
-    --dark-light: #969CB3;
-    --white: #FFFFFF;
-    --white-light: #F0F2F5;
-  }
-
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   
   button {
     cursor: pointer;
-    /*transition: filter 0.2s;
+    transition: filter 0.2s;
     &:hover {
       filter: brightness(0.9);
-    }*/
+    }
   }
 
   [disabled] {
@@ -34,7 +23,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, button {
-    font-family: 'Poppins', sans-serif;
+    border: 0;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
   }
 
@@ -44,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html, body, #root {
 		height:100%;
-    background: {props => props.theme.colors.gray}
+    background: ${props => props.theme.colors.gray}
 	}
 
   html {
@@ -58,7 +49,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: var(--white-light);
+    background: ${props => props.theme.colors.gray};
     -webkit-font-smoothing: antialiased;
   }
 
