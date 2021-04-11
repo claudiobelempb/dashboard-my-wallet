@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Switch, { ReactSwitchProps } from "react-switch";
 
 interface IButtonProps {
   bgColor?: string;
@@ -21,7 +22,8 @@ export const ButtonContainer = styled.button<IButtonProps>`
   /* margin-top: 20px; */
   color: ${props => props.theme.colors.white};
   margin-left: 10px;
-  &::after {
+
+  /*&::after {
     content: '';
     display: block;
     width: 60px;
@@ -29,6 +31,17 @@ export const ButtonContainer = styled.button<IButtonProps>`
     position: absolute;
     bottom: 0;
     background-color: ${props => props.tagColor ? props.tagColor : props.theme.colors.info};
+  }*/
+
+  & > span {
+    font-size: ${props => props.fontSize ? props.fontSize : '1rem'};
+    font-weight: bold;
+    transition: opacity .3s;
+    padding: 0.50rem;
+
+    &:hover{
+      opacity: .7;
+    }
   }
 `;
 
@@ -36,8 +49,17 @@ export const ButtonTitle = styled.span<IButtonProps>`
   font-size: ${props => props.fontSize ? props.fontSize : '1rem'};
   font-weight: bold;
   transition: opacity .3s;
+  padding: 0.50rem;
 
   &:hover{
     opacity: .7;
   }
+`;
+
+export const ToggleSwitch = styled(Switch).attrs<ReactSwitchProps>(
+  ({theme}) => ({
+    onColor: theme.colors.warning,
+    offColor: theme.colors.danger,
+  }))<ReactSwitchProps>`
+
 `;

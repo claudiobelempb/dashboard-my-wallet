@@ -2,9 +2,9 @@ import React, {useMemo} from "react"
 import { HeaderContainer } from './styles';
 
 import emojis from "../../utils/emojis";
-// import { Button } from '../Button';
+import { ButtonTogle } from '../ButtonToggle';
 
-export function Header() {
+const Header: React.FC = () => {
 
   const emoji = useMemo(() => {
 
@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <HeaderContainer jcontent={"space-between"} garea={"MH"}>
-      <h1>Toggle</h1>
+      <ButtonTogle/>
       <div>
         <h3>Olá, {emoji}</h3> 
         <span>Cláudio Cardoso</span>
@@ -24,3 +24,5 @@ export function Header() {
     </HeaderContainer>
   );
 }
+
+export { Header };
