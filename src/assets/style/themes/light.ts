@@ -2,13 +2,16 @@
 export default {
   title: 'Light',
   colors: {
+    dark: '#DCDCDC',
+    dark_light: '#F5F5F5',
+    light: '#252A48',
     black: '#FFFFFF',
     white: '#000000',
-    gray: '#DCDCDC',
-    light: '#F5F5F5',
+    blue: '#DCDCDC',
+    gray: '#BFBFBF',
     info: '#3B5998',
-    warning: '#F7931B',
     sucess: '#03BB85',
-    danger: '#E62E4D'
+    warning: '#F7931B',
+    danger: '#FF6961'
   },
 };

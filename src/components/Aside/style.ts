@@ -11,6 +11,7 @@ export const AsideContainer = styled.aside<IAsideProps>`
   align-items: center;
   flex-direction: column;
   padding: 0.25rem;
-  background-color: ${props => props.theme.colors.blue};
+  background-color: ${props => props.theme.colors.dark_light};
+  color: ${props => props.theme.colors.white};
   border-right: 1px solid ${props => props.theme.colors.white};
 `;

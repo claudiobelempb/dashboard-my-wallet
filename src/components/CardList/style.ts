@@ -20,7 +20,7 @@ export const CardListContainerInfo = styled.li<ICardListContainerInfoProps>`
   align-items: center;
   padding: 0 20px;
   margin-top: 17px;
-  background-color: ${props => props.theme.colors.blue_light};
+  background-color: ${props => props.theme.colors.dark_light};
   border-radius: 5px;
   cursor: pointer;
   transition: all .3s;

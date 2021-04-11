@@ -11,7 +11,8 @@ export const HeaderContainer = styled.header<IHeaderProps>`
   justify-content: center;
   align-items:center;
   width: 100%;
-  background: ${props => props.theme.colors.blue};
+  background: ${props => props.theme.colors.dark_light};
+  color: ${props => props.theme.colors.white};
   padding: 0.25rem;
 `;
 /*
