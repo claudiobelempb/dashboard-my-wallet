@@ -16,6 +16,7 @@ const ButtonTogle: React.FC = ({title, bgColor, tgColor, width, fontSize, type, 
       <span>{title ? title : 'Light'}</span>
         <ToggleSwitch 
           checked
+          
           uncheckedIcon={false}
           checkedIcon={false}
           onChange={()=> {console.log("MUDOU")}}

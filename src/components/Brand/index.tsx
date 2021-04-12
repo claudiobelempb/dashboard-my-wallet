@@ -5,12 +5,14 @@ import logoBrand from '../../assets/images/logo.svg';
 
 interface IBrand {
   title?: string;
+  alt?: string;
+  mw?: number;
 }
 
-const Brand: React.FC<IBrand> = ({ title }: IBrand) => {
+const Brand: React.FC<IBrand> = ({ title, alt, mw }: IBrand) => {
   return (
-    <BrandContainer href={"/"}>
-      <img src={logoBrand} alt={"My Logo"} />
+    <BrandContainer mw={mw} href={"/"}>
+      <img src={logoBrand} alt={alt} />
       <h1>{title}</h1>
     </BrandContainer>
   );

@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
-export const BrandContainer = styled.a`
+interface IBrandProps {
+  mw?: number;
+  height?: string;
+  width?: number;
+}
+
+export const BrandContainer = styled.a<IBrandProps>`
   
   display: flex;
   justify-content: center;
@@ -9,7 +15,8 @@ export const BrandContainer = styled.a`
 
   & img {
     height: auto;
-    max-width:100%;
+    max-width: 100%;
+    width: ${porps => porps.width ? porps.width : 2.5}rem;
   }
 
   & h1 {

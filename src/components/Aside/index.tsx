@@ -8,8 +8,8 @@ import { NavBarVertical } from '../NavBarVertical';
 export const Aside: React.FC = () => {
   return (
     <AsideContainer>
-      <Brand title={"My Wallet"}/>
-      <NavBarVertical/>
+      <Brand mw={30} alt={"My Logo"} title={"My Wallet"}/> 
+      <NavBarVertical />
     </AsideContainer>
   );
 }
