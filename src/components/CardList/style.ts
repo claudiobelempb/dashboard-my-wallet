@@ -9,6 +9,8 @@ export const CardListContainer = styled.div`
   justify-content: center;
   margin-top: 20px;
   padding: 20px 0;
+  width: 100%;
+  min-width: 100%;
 `;
 
 export const CardListContainerInfo = styled.li<ICardListContainerInfoProps>`

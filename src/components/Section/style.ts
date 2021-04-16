@@ -1,11 +1,20 @@
 import styled from  'styled-components';
 
-interface IContainer {
-  flexDirection?: string;
+interface IContainerSection {
+  fdirection?: string;
+  garea?:string;
+  jcontent?: string;
+  aitems?: string;
+  bgcolor?:string;
+  bbottom?: string;
 }
 
-export const Container = styled.div<IContainer>`
-  background-color: ${props => props.theme.colors.blue};
+export const ContainerSection = styled.section<IContainerSection>`
+  grid-area: ${props => props.garea ? props.garea : "CT"};
+  display: flex;
+  background-color: ${props => props.bgcolor ? props.bgcolor : props.theme.colors.blue};
+  justify-content: ${props => props.jcontent ? props.jcontent : "center"};
+  min-width: 100%;
 `;
 
 

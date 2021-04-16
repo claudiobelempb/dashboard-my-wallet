@@ -2,14 +2,14 @@ import React from 'react';
 
 import { AsideContainer } from "./style";
 
-import { Brand } from '../Brand';
-import { NavBarVertical } from '../NavBarVertical';
+interface IAsideProps {
+  children?: React.ReactNode;
+}
 
-export const Aside: React.FC = () => {
+export const Aside: React.FC<IAsideProps> = ({children}: IAsideProps) => {
   return (
     <AsideContainer>
-      <Brand mw={30} alt={"My Logo"} title={"My Wallet"}/> 
-      <NavBarVertical />
+      { children }
     </AsideContainer>
   );
 }

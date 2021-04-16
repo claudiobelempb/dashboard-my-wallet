@@ -2,10 +2,14 @@ import React from "react";
 
 import { MainContainer } from "./style";
 
-const Main: React.FC = () => {
+interface IMainProps {
+  children?: React.ReactNode;
+}
+
+const Main: React.FC<IMainProps> = ({ children }: IMainProps) => {
   return(
-    <MainContainer garea={"CT"}>
-      Main
+    <MainContainer garea={"CT"}> 
+      {children}
     </MainContainer>
   );
 }

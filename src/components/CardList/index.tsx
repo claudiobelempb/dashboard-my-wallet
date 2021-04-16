@@ -21,7 +21,7 @@ export const CardList: React.FC<ICardListProps> = ({
   cardcolor,
   tagcolor,
   amount
-}) => {
+}: ICardListProps) => {
   return (
     <>
       {/* <CardListContainer>
@@ -31,10 +31,10 @@ export const CardList: React.FC<ICardListProps> = ({
       
       <CardListContainerInfo tagcolor={tagcolor}>
         <CardListTitleContainer>
-          <CardListTitle>Desenvolvimento de site</CardListTitle>
-            <CardListSubTitle>Venda</CardListSubTitle>
+          <CardListTitle>{title}</CardListTitle>
+            <CardListSubTitle>{subtitle}</CardListSubTitle>
         </CardListTitleContainer>
-        <CardListAmount>R$ 12.000,00</CardListAmount>
+        <CardListAmount>R$ {amount}</CardListAmount>
       </CardListContainerInfo>
     </>
   );

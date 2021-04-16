@@ -1,12 +1,21 @@
 import React from 'react';
 import { 
-  Container
+  ContainerSection
 } from './style';
 
-export const ContainerMain: React.FC = () => {
+interface ISection {
+  children?: React.ReactNode;
+  fdirection?: string;
+  garea?:string;
+  jcontent?: string;
+  aitems?: string;
+  bgcolor?:string;
+  bbottom?: string;
+}
+export const Section: React.FC<ISection> = ({children, jcontent }: ISection) => {
   return (
-    <Container>
-        <h1>Container</h1>
-    </Container>
+    <ContainerSection jcontent={jcontent}>
+        {children}
+    </ContainerSection>
   );
 }

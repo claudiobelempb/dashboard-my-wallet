@@ -1,20 +1,24 @@
 import styled from  'styled-components';
 
 interface IHeaderProps {
-  flexDirection?: string;
+  fdirection?: string;
   garea?:string;
   jcontent?: string;
+  aitems?: string;
+  bgcolor?:string;
+  bbottom?: string;
 }
 
 export const HeaderContainer = styled.header<IHeaderProps>`
-  grid-area: ${props => props.garea ? props.garea : "MH"};
+  grid-area: ${props => props.garea ? props.garea : ""};
   display: flex;
+  flex-direction: ${props => props.fdirection ? props.fdirection : "row"};
   justify-content: ${props => props.jcontent ? props.jcontent : "center"};
-  align-items:center;
+  align-items: ${props => props.aitems ? props.aitems : "center"};
   width: 100%;
-  background: ${props => props.theme.colors.dark_light};
+  background: ${props => props.bgcolor ? props.bgcolor : props.theme.colors.dark_light};
   color: ${props => props.theme.colors.white};
-  border-bottom: 1px solid ${props => props.theme.colors.white};
+  border-bottom: 1px solid ${props => props.bbottom ? "none" : props.theme.colors.white};
   padding: 1rem;
 
   & div > h3 {

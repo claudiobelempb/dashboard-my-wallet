@@ -1,26 +1,21 @@
-import React, {useMemo} from "react"
+import React from "react";
 import { HeaderContainer } from './styles';
 
-import emojis from "../../utils/emojis";
-import { ButtonTogle } from '../ButtonToggle';
+interface IHeader {
+  children?: React.ReactNode;
+  fdirection?: string;
+  garea?:string;
+  jcontent?: string;
+  aitems?: string;
+  bgcolor?: string;
+  bbottom?: string;
+}
 
-const Header: React.FC = () => {
-
-  const emoji = useMemo(() => {
-
-    const indice = Math.floor(Math.random() * emojis.length);
-
-    return emojis[indice];
-
-  }, []);
+const Header: React.FC<IHeader> = ({children, fdirection, garea, jcontent, aitems, bgcolor, bbottom }: IHeader) => {
 
   return (
-    <HeaderContainer jcontent={"space-between"} garea={"MH"}>
-      <ButtonTogle/>
-      <div>
-        <h3>Olá, {emoji}</h3> 
-        <span>Cláudio Cardoso</span>
-      </div>
+    <HeaderContainer fdirection={fdirection} jcontent={jcontent} aitems={aitems} garea={garea} bgcolor={bgcolor} bbottom={bgcolor}>
+      {children}
     </HeaderContainer>
   );
 }
