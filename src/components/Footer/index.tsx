@@ -1,12 +1,18 @@
 import React from 'react';
 import { 
-  Container
+  FooterContainer
 } from './style';
 
-export const ContainerMain: React.FC = () => {
+interface IFooterProps {
+  children: React.ReactNode;
+}
+
+const Footer: React.FC<IFooterProps> = ({ children }) => {
   return (
-    <Container>
-        <h1>Container</h1>
-    </Container>
+    <FooterContainer>
+        {children}
+    </FooterContainer>
   );
 }
+
+export { Footer };

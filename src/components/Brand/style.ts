@@ -12,6 +12,7 @@ export const BrandContainer = styled.a<IBrandProps>`
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  padding: 1rem;
 
   & img {
     height: auto;
@@ -20,7 +21,7 @@ export const BrandContainer = styled.a<IBrandProps>`
   }
 
   & h1 {
-    font-size: 24px;
+    font-size: 2rem;
     color: ${props => props.theme.colors.white};
     margin-left: 10px;
   }

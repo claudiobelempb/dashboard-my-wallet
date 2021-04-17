@@ -89,7 +89,7 @@ export const CardListTitleContainer = styled.div`
 `;
 
 export const CardListTitle = styled.span`
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: 100;
   color: ${props => props.theme.colors.white};
 
@@ -101,12 +101,12 @@ export const CardListTitle = styled.span`
 
 export const CardListSubTitle = styled.small`
   font-weight: 100;
-  font-size: 16px;
+  font-size: 1rem;
   color: ${props => props.theme.colors.white};
 `;
 
 export const CardListAmount = styled.span`
-  font-size: 24;
+  font-size: 1.5rem;
   font-weight: bold;
   color: ${props => props.theme.colors.white};
 `;

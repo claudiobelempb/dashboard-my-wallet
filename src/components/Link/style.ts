@@ -9,7 +9,7 @@ export const LinkContainer = styled.a<ILinkProps>`
   align-items: center;
   color: ${props => props.color ? props.color : props.theme.colors.warning};
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.3rem;
 
   transition: opacity .3s;
   &:hover {

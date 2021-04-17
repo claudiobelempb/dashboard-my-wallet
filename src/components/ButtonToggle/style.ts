@@ -15,8 +15,6 @@ export const ButtonContainer = styled.button<IButtonProps>`
   align-items: center;
   position: relative;
   // width: ${props => props.width ? props.width : '1rem'};
-  padding: 0 2rem;
-  height:40px;
   border-radius: 5px;
   background: ${props => props.bgColor ? props.theme.colors.warning : 'none'};
   /* margin-top: 20px; */

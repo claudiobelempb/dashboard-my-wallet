@@ -9,12 +9,14 @@ interface IHeader {
   aitems?: string;
   bgcolor?: string;
   bbottom?: string;
+  height?: string;
+  width?: string;
 }
 
-const Header: React.FC<IHeader> = ({children, fdirection, garea, jcontent, aitems, bgcolor, bbottom }: IHeader) => {
+const Header: React.FC<IHeader> = ({children, fdirection, garea, jcontent, aitems, bgcolor, bbottom, width, height }: IHeader) => {
 
   return (
-    <HeaderContainer fdirection={fdirection} jcontent={jcontent} aitems={aitems} garea={garea} bgcolor={bgcolor} bbottom={bgcolor}>
+    <HeaderContainer fdirection={fdirection} jcontent={jcontent} aitems={aitems} garea={garea} bgcolor={bgcolor} bbottom={bbottom} width={width} height={height}>
       {children}
     </HeaderContainer>
   );

@@ -7,6 +7,8 @@ interface IHeaderProps {
   aitems?: string;
   bgcolor?:string;
   bbottom?: string;
+  width?: string;
+  height?: string;
 }
 
 export const HeaderContainer = styled.header<IHeaderProps>`
@@ -15,11 +17,11 @@ export const HeaderContainer = styled.header<IHeaderProps>`
   flex-direction: ${props => props.fdirection ? props.fdirection : "row"};
   justify-content: ${props => props.jcontent ? props.jcontent : "center"};
   align-items: ${props => props.aitems ? props.aitems : "center"};
-  width: 100%;
+  height: ${props => props.height ? props.height : "59"}px;
   background: ${props => props.bgcolor ? props.bgcolor : props.theme.colors.dark_light};
   color: ${props => props.theme.colors.white};
-  border-bottom: 1px solid ${props => props.bbottom ? "none" : props.theme.colors.white};
-  padding: 1rem;
+  width: ${props => props.width ? props.width : "100"}%;
+  padding: 0 1rem;
 
   & div > h3 {
     font-size: 28px;

@@ -2,14 +2,14 @@ import React, {useMemo} from "react"
 
 import { Grid } from "./style";
 
-import emojis from "../../../utils/emojis";
-import { ButtonTogle } from '../../ButtonToggle';
+import emojis from "../../utils/emojis";
+import { ButtonTogle } from '../../components/ButtonToggle';
 
-import { Brand } from '../../Brand';
-import { NavBarVertical } from '../../NavBarVertical';
-import { Aside } from "../../Aside"
-import { Header } from '../../Header';
-import { Main }from "../../Main";
+import { Brand } from '../../components/Brand';
+import { NavBarVertical } from '../../components/NavBarVertical';
+import { Aside } from "../../components/Aside"
+import { Header } from '../../components/Header';
+import { Main }from "../../components/Main";
 
 interface ILayoutDashBoardProps {
   children?: React.ReactNode;

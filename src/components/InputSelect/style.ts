@@ -17,6 +17,7 @@ export const InputSelectItem = styled.select`
   font-size: 16px;
   padding: 7px 10px;
   border-radius: 5px;
+  outline: none;
   & label {
 
   }

@@ -1,11 +1,19 @@
 import styled from  'styled-components';
 
-interface IContainer {
+interface IFooterContainer {
   flexDirection?: string;
+  bgcolor?: string;
 }
 
-export const Container = styled.div<IContainer>`
-  background-color: ${props => props.theme.colors.blue};
+export const FooterContainer = styled.div<IFooterContainer>`
+  width: 100%;
+  height: 60px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: ${props => props.theme.colors.white};
+  background-color: ${props => props.bgcolor ? props.theme.colors.blue : props.bgcolor};
+  padding: 0 1rem;
 `;
 
 

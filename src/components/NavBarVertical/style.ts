@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const NavBarVerticalContainer = styled.nav`
-  min-width: 100%;
   margin-top: 3rem;
-  padding: 0 1rem;
+  padding: 0.8rem 0 0 0;
+  width: 100%;
+  min-width: 100%;
   
   & > ul {
     display: flex;
@@ -16,10 +17,10 @@ export const NavBarVerticalContainer = styled.nav`
     & > li {
     padding: 0.30rem 1rem;
   }
-  }
 
   & img {
     height: 50px;
     width: 50px;
   }
-`;
+
+}`;

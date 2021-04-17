@@ -9,11 +9,14 @@ interface IContentProps {
   fdirection?: string;
   jcontent?: string;
   aitems?: string;
+  bgcolor?: string;
+  isbr?: boolean;
+  isbb?: boolean;
 }
 
-const Content: React.FC<IContentProps> = ({ garea, children, jcontent, aitems, fdirection }: IContentProps) => {
+const Content: React.FC<IContentProps> = ({ garea, children, jcontent, aitems, fdirection, bgcolor, isbr, isbb }) => {
   return (
-    <ContentContainer garea={garea} jcontent={jcontent} aitems={aitems} fdirection={fdirection}>
+    <ContentContainer garea={garea} jcontent={jcontent} aitems={aitems} fdirection={fdirection} bgcolor={bgcolor} isbr={isbr} isbb={isbb}>
       {children}
     </ContentContainer>
   );
