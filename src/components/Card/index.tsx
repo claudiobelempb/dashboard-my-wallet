@@ -14,7 +14,7 @@ export function Card({ bgColor, color, icon }: ICardProps) {
           <img src={icon} />
         </CardIcon>
       </CardTitle>
-      <CardValue>R$ 17.400,00</CardValue>
+      <CardValue>17.400,00</CardValue>
     </CardContainer>
   );
 }

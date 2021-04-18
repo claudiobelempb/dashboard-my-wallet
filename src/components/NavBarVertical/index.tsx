@@ -14,7 +14,7 @@ const NavBarVertical: React.FC = () => {
     <NavBarVerticalContainer>
       <ul>
         <li>
-          <Link url={"/"} title={"Dashboard"}>
+          <Link url={"/dashboard"} title={"Dashboard"}>
             <MdDashboard />
           </Link>
         </li>
@@ -24,12 +24,12 @@ const NavBarVertical: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link url={"/"} title={"Entradas"}>
+          <Link url={"/list/entry-balance"} title={"Entradas"}>
             <MdArrowDownward/>
           </Link>
         </li>
         <li>
-          <Link url={"/"} title={"Saídas"}>
+          <Link url={"/list/exit-balance"} title={"Saídas"}>
             <MdArrowUpward/>
           </Link>
         </li>

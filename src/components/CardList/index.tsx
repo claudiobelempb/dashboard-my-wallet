@@ -24,7 +24,7 @@ export const CardList: React.FC<ICardListProps> = ({
           <small>{subtitle}</small>
         </Box>
         <Box aitems={"flex-end"}>
-          <span>R$ {amount}</span>
+          <span>{amount}</span>
         </Box>
       </CardListContainer>
     </>
