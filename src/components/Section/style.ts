@@ -16,8 +16,7 @@ export const ContainerSection = styled.section<IContainerSection>`
   justify-content: ${props => props.jcontent ? props.jcontent : "center"};
   width: 100%;
   min-width: 100%;
-  padding: 0 1rem;
-  margin: 2rem 0;
+  padding: 1rem;
 `;
 
 

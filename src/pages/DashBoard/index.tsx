@@ -52,7 +52,7 @@ const Dashboard: React.FC<IDashBordProps> = ({ children }) => {
           </Box>
         </Header>
       </Content>
-      <Content garea={"M"} bgcolor={"#1B1F38"}>
+      <Content garea={"M"} bgcolor={"#1B1F38"} height={"calc(100vh - 60px)"} isofy={true}>
         {children}
       </Content>
       <Content garea={"F"} bgcolor={"#252A48"}>

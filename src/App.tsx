@@ -10,6 +10,7 @@ import dark from './assets/style/themes/dark';
 import { Dashboard } from './pages/DashBoard';
 // import { Home } from "./pages/Home";
 import { List } from "./pages/List";
+//import { Table } from "./components/Table";
 
 const App: React.FC = () => {
   return (

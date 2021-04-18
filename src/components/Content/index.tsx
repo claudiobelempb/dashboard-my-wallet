@@ -10,13 +10,18 @@ interface IContentProps {
   jcontent?: string;
   aitems?: string;
   bgcolor?: string;
+  bgscroll?: string;
+  height?: string;
+  mheight?:string;
   isbr?: boolean;
   isbb?: boolean;
+  isofy?: boolean;
 }
 
-const Content: React.FC<IContentProps> = ({ garea, children, jcontent, aitems, fdirection, bgcolor, isbr, isbb }) => {
+
+const Content: React.FC<IContentProps> = ({ garea,height, mheight, children, jcontent, aitems, fdirection, bgcolor, isbr, isbb, isofy, bgscroll}) => {
   return (
-    <ContentContainer garea={garea} jcontent={jcontent} aitems={aitems} fdirection={fdirection} bgcolor={bgcolor} isbr={isbr} isbb={isbb}>
+    <ContentContainer garea={garea} height={height} mheight={mheight} jcontent={jcontent} aitems={aitems} fdirection={fdirection} bgcolor={bgcolor} isbr={isbr} isbb={isbb} isofy={isofy} bgscroll={bgscroll}>
       {children}
     </ContentContainer>
   );

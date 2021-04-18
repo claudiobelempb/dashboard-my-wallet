@@ -1,19 +1,10 @@
 import styled from 'styled-components';
 
-interface ICardListContainerInfoProps {
+interface ICardListContainerProps {
   tagcolor?: string;
 }
 
-export const CardListContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  padding: 20px 0;
-  width: 100%;
-  min-width: 100%;
-`;
-
-export const CardListContainerInfo = styled.li<ICardListContainerInfoProps>`
+export const CardListContainer = styled.li<ICardListContainerProps>`
   position: relative;
   width: 100%;
   height: 60px;
@@ -31,6 +22,7 @@ export const CardListContainerInfo = styled.li<ICardListContainerInfoProps>`
     opacity: .7;
     transform: translateX(10px);
   }
+
   &::before {
     display: block;
     content: '';
@@ -41,72 +33,25 @@ export const CardListContainerInfo = styled.li<ICardListContainerInfoProps>`
     left: 0;
     top: 15px;
   }   
-`;
 
-export const CardListRecorrentesTitle = styled.span`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: ${props => props.theme.colors.white};
-  font-size: 16px;
-  font-weight: bold;
-  margin-right: 20px;
-  
-  &::after {
-    display: block;
-    content: '';
-    width: 54px;
-    height: 10px;
-    background-color: ${props => props.theme.colors.sucess};
-    margin-top: 5px;
+  & span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: ${props => props.theme.colors.white};
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
-`;
 
-export const CardListEventuaisTitle = styled.span`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: ${props => props.theme.colors.white};
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 20px;
-  &::after {
-    display: block;
-    content: '';
-    width: 54px;
-    height: 10px;
-    background-color: ${props => props.theme.colors.warning};
-    margin-top: 5px;
-  }
-`;
-
-export const CardListTitleContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-`;
-
-export const CardListTitle = styled.span`
-  font-size: 1.3rem;
-  font-weight: 100;
-  color: ${props => props.theme.colors.white};
-
-  & > span {
+  & small {
     font-weight: 100;
-    font-size: 16px;
+    font-size: 1rem;
+    color: ${props => props.theme.colors.white};
   }
+
 `;
 
-export const CardListSubTitle = styled.small`
-  font-weight: 100;
-  font-size: 1rem;
-  color: ${props => props.theme.colors.white};
-`;
-
-export const CardListAmount = styled.span`
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: ${props => props.theme.colors.white};
-`;

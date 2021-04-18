@@ -1,11 +1,6 @@
 import React from 'react';
-import { 
-  CardListTitle,
-  CardListTitleContainer,
-  CardListContainerInfo,
-  CardListSubTitle,
-  CardListAmount
-} from './style';
+import { Box } from '../Box';
+import { CardListContainer } from './style';
 
 interface ICardListProps {
   title?: string;
@@ -18,24 +13,20 @@ interface ICardListProps {
 export const CardList: React.FC<ICardListProps> = ({
   title,
   subtitle,
-  cardcolor,
   tagcolor,
   amount
 }: ICardListProps) => {
   return (
     <>
-      {/* <CardListContainer>
-        <CardListRecorrentesTitle>Recorrentes</CardListRecorrentesTitle>
-        <CardListEventuaisTitle>Eventuais</CardListEventuaisTitle>
-      </CardListContainer> */}
-      
-      <CardListContainerInfo tagcolor={tagcolor}>
-        <CardListTitleContainer>
-          <CardListTitle>{title}</CardListTitle>
-            <CardListSubTitle>{subtitle}</CardListSubTitle>
-        </CardListTitleContainer>
-        <CardListAmount>R$ {amount}</CardListAmount>
-      </CardListContainerInfo>
+      <CardListContainer tagcolor={tagcolor}>
+        <Box aitems={"flex-start"}>
+          <span>{title}</span>
+          <small>{subtitle}</small>
+        </Box>
+        <Box aitems={"flex-end"}>
+          <span>R$ {amount}</span>
+        </Box>
+      </CardListContainer>
     </>
   );
 }
