@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "../../components/Box";
-import { InputSelect } from "../../components/InputSelect";
+//import { InputSelect } from "../../components/InputSelect";
 import { Section } from "../../components/Section";
 import { Title } from "../../components/Title";
 import { ContainerHome } from './styles';
@@ -27,8 +27,8 @@ const Home: React.FC<IHomeProps> = ({ children, garea, maxcolumn, mincolumn }) =
           <Title title={"Home"}/>
         </Box>
         <Box fdirection={"row"} jcontent={"flex-end"}>
-          <InputSelect options={options}/>
-          <InputSelect options={options}/>
+          
+        
         </Box>
       </Section>
     </>

@@ -1,10 +1,6 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { v4 as uuid} from "uuid";
 
-import gains from "../../repositories/gains";
-import expenses from "../../repositories/expenses";
-
-
 import { LayoutLateral } from "../../Layouts/LayoutLateral";
 import { Box } from "../../components/Box";
 import { Button } from "../../components/Button";
@@ -15,6 +11,9 @@ import { Title } from "../../components/Title";
 
 import { formatValue } from "../../utils/formatValue";
 import { formatDate } from "../../utils/fromatDate";
+
+import gains from "../../repositories/gains";
+import expenses from "../../repositories/expenses";
 
 interface IListProps {
   match: {
@@ -36,6 +35,8 @@ interface IData {
 const List: React.FC<IListProps> = ({ match }) => {
 
   const [data, setData] = useState<IData[]>([]);
+  const [monthSelected, setMonthSelected] = useState<string>(String(new Date().getMonth() + 1));
+  const [yearSelected, setYearSelected] = useState<string>(String(new Date().getFullYear()));
 
   const { type } = match.params;
   
@@ -52,9 +53,11 @@ const List: React.FC<IListProps> = ({ match }) => {
   }, [type]);
 
   const month = [
-    {value: 0, label: 'Janiero'},
-    {value: 1, label: 'Fevereiro'},
-    {value: 2, label: 'Março'},
+    {value: 1, label: 'Janiero'},
+    {value: 2, label: 'Fevereiro'},
+    {value: 3, label: 'Março'},
+    {value: 4, label: 'Abril'},
+    {value: 5, label: 'Maio'},
   ]
 
   const year = [
@@ -65,7 +68,15 @@ const List: React.FC<IListProps> = ({ match }) => {
 
   useEffect(() => {
 
-    const response = listData.map(item => {
+    const filteredData = listData.filter(item => {
+      const date = new Date(item.date);
+      const month = String(date.getMonth() + 1);
+      const year = String(date.getFullYear());
+
+      return month === monthSelected && year === yearSelected;
+    });
+
+    const formattedData = filteredData.map(item => {
       return {
         id: uuid(),
         description: item.description,
@@ -75,9 +86,9 @@ const List: React.FC<IListProps> = ({ match }) => {
         color: item.frequency === "recorrente" ? "#4E41F0" : "#E44C4E"
       }
     })
-    setData(response);
+    setData(formattedData);
 
-  }, [listData]);
+  }, [listData, monthSelected, yearSelected]);
 
   return (
     <LayoutLateral>
@@ -86,8 +97,8 @@ const List: React.FC<IListProps> = ({ match }) => {
           <Title title={title} isBgcolor={isBgcolor}/>
         </Box>
         <Box fdirection={"row"} jcontent={"flex-end"}>
-          <InputSelect options={month}/>
-          <InputSelect options={year}/>
+          <InputSelect onChange={(e) => setMonthSelected(e.target.value)} options={month} defaultValue={monthSelected}/>
+          <InputSelect onChange={(e) => setYearSelected(e.target.value)} options={year} defaultValue={yearSelected}/>
         </Box>
       </Section>
       <Section>
