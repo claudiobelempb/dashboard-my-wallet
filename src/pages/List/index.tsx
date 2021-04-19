@@ -14,6 +14,7 @@ import { formatDate } from "../../utils/fromatDate";
 
 import gains from "../../repositories/gains";
 import expenses from "../../repositories/expenses";
+import listOfMonths from "../../utils/months";
 
 interface IListProps {
   match: {
@@ -52,19 +53,27 @@ const List: React.FC<IListProps> = ({ match }) => {
     return type === "entry-balance" ? gains : expenses;
   }, [type]);
 
-  const month = [
-    {value: 1, label: 'Janiero'},
-    {value: 2, label: 'Fevereiro'},
-    {value: 3, label: 'Março'},
-    {value: 4, label: 'Abril'},
-    {value: 5, label: 'Maio'},
-  ]
+  const months = useMemo(() => {
+    return listOfMonths.map((month, index) => {
+      return { value: index + 1, label: month };
+    });
+  },[])
 
-  const year = [
-    {value: 2021, label: 2021},
-    {value: 2020, label: 2020},
-    {value: 2019, label: 2019},
-  ]
+  const years = useMemo(() => {
+    let uniqueYears: number[] = [];
+
+    listData.forEach(item => {
+      const date = new Date(item.date);
+      const year = date.getFullYear();
+
+      if(!uniqueYears.includes(year)) {
+        uniqueYears.push(year);
+      }
+    });
+    return uniqueYears.map(year => {
+        return { value: year, label: year };
+    });
+  },[listData]);
 
   useEffect(() => {
 
@@ -97,8 +106,8 @@ const List: React.FC<IListProps> = ({ match }) => {
           <Title title={title} isBgcolor={isBgcolor}/>
         </Box>
         <Box fdirection={"row"} jcontent={"flex-end"}>
-          <InputSelect onChange={(e) => setMonthSelected(e.target.value)} options={month} defaultValue={monthSelected}/>
-          <InputSelect onChange={(e) => setYearSelected(e.target.value)} options={year} defaultValue={yearSelected}/>
+          <InputSelect onChange={(e) => setMonthSelected(e.target.value)} options={months} defaultValue={monthSelected}/>
+          <InputSelect onChange={(e) => setYearSelected(e.target.value)} options={years} defaultValue={yearSelected}/>
         </Box>
       </Section>
       <Section>
